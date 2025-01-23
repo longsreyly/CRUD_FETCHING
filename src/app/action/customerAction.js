@@ -25,14 +25,14 @@ export async function deleteCustomerServiceAction(customerId) {
 }
 
 
-//update customer action
-export async function updateCustomerServiceAction(customerId) {
-    const updatedData = {
-        customerName: "Updated Name",
-        gender: "Female",
-        address: "Updated Address",
-    };
-    const updatedCustomer = await updateCustomerService(customerId, updatedData);
-    console.log(updatedCustomer); // Log the updated customer details
-}
+// //update customer action
+// export async function updateCustomerServiceAction(customerId) {
+//     const updatedData = {
+//         customerName: "Updated Name",
+//         gender: "Female",
+//         address: "Updated Address",
+//     };
+//     const updatedCustomer = await updateCustomerService(customerId, updatedData);
+//     console.log(updatedCustomer); // Log the updated customer details
+// }
 

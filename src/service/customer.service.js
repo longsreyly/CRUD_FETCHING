@@ -23,17 +23,18 @@ export const insertCustomerService = async (newCustomer) => {
 }
 
 //Delete Customer Service
-export const deleteCustomerService = async (customerId) => {
+export const deleteCustomerService = async (customerId, deleteData) => {
     const res = await fetch (`https://655c2c57ab37729791a9f8b0.mockapi.io/api/customer/${customerId}`,
     {
         method : 'DELETE',
+        body: JSON.stringify(deleteData),
         headers: {
             "Content-Type": 'application/json',
         }
     }
     
 ); 
-    const data = res.json();
+    const data = await res.json();
     return data;
 }
 
