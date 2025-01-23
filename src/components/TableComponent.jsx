@@ -1,6 +1,5 @@
-import { deleteCustomerServiceAction } from "@/app/action/customerAction";
-const TableComponent = ({ customerData, onEditCustomer,onDeleteCustomer }) => {
-  
+const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
+
     return (
         <main>
             <div className="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10">
@@ -30,8 +29,8 @@ const TableComponent = ({ customerData, onEditCustomer,onDeleteCustomer }) => {
                                             {/* <ButtonDeleteCustomer  customerId={data.id}/> */}
                                             {/* <button onClick={() => deleteCustomerServiceAction(data.id)}
                                                 className="ml-4 py-1 px-3 text-sm text-white bg-red-500 rounded hover:bg-red-600">Delete</button> */}
-                                                <button onClick={() => onDeleteCustomer(data.id)}
-    className="ml-4 py-1 px-3 text-sm text-white bg-red-500 rounded hover:bg-red-600">Delete</button>
+                                            <button onClick={() => onDeleteCustomer(data.id)}
+                                                className="ml-4 py-1 px-3 text-sm text-white bg-red-500 rounded hover:bg-red-600">Delete</button>
 
                                         </div>
                                     </td>
