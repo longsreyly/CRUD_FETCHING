@@ -35,11 +35,11 @@ const AboutPage = () => {
                                     className="MazNVa comp-k0qndu82 wixui-image"
                                 >
                                     <div data-testid="linkElement" className="j7pOnl" style={{ display: 'flex', justifyContent: 'center' }}>
-                                        <img
+                                        <img  data-aos="fade-right"
                                             alt="About Page Image"
                                             width="442"
                                             height="547"
-                                            srcSet="https://rixincosmetics.com/wp-content/uploads/2024/07/happy-woman-and-skincare-line.webp"
+                                            src="https://rixincosmetics.com/wp-content/uploads/2024/07/happy-woman-and-skincare-line.webp"
                                             style={{
                                                 width: "442px",
                                                 height: "547px",
