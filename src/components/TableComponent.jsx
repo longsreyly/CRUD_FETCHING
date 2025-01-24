@@ -41,7 +41,10 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
                     </tbody>
                 </table>
             </div>
+
+            
         </main>
+        
 
     )
 };

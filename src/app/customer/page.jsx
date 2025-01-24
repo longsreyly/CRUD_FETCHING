@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import FormComponent from "./_component/FormComponent";
 import TableComponent from "@/components/TableComponent";
 import { deleteCustomerServiceAction } from "../action/customerAction";
+import NavbarComponent from "@/components/NavbarComponent";
 
 
 const CustomerComponent = () => {
@@ -56,13 +57,14 @@ const CustomerComponent = () => {
 
 
     return (
-        <main className="mx-10 mt-10">
-            <div
+        <main className="mx-10">
+            <NavbarComponent/>
+            {/* <div
                 className="alert table_title text-center"
                 style={{ backgroundColor: "gray", color: "#0d6efd", padding: "10px", borderRadius: "5px" }}
             >
                 <h2 className="text-white">ADD CUSTOMER INTO TABLE</h2>
-            </div>
+            </div> */}
             <div className="grid grid-cols-2 d-flex">
                 <div>
                     {/* Form for adding or editing customers */}
