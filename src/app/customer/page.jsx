@@ -5,6 +5,7 @@ import FormComponent from "./_component/FormComponent";
 import TableComponent from "@/components/TableComponent";
 import { deleteCustomerServiceAction } from "../action/customerAction";
 import NavbarComponent from "@/components/NavbarComponent";
+import FooterComponent from "@/components/FooterComponent";
 
 
 
@@ -79,6 +80,7 @@ const CustomerComponent = () => {
                     <TableComponent customerData={customerData} onEditCustomer={handleEditCustomer} onDeleteCustomer={handleDeleteCustomer} />
                 </div>
             </div>
+            <FooterComponent/>
         </main>
     );
 };

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const FooterComponent = () => {
     return(
         <>
@@ -8,13 +10,13 @@ const FooterComponent = () => {
             <div className="text-sm uppercase text-pink-600 font-bold">Menu</div>
             <ul>
               <li className="my-2">
-                <a className="hover:text-pink-600" href="#">Home</a>
+                <Link className="hover:text-pink-600" href="/">Home</Link>
               </li>
               <li className="my-2">
-                <a className="hover:text-pink-600" href="#">About</a>
+                <Link className="hover:text-pink-600" href="/about">About</Link>
               </li>
               <li className="my-2">
-                <a className="hover:text-pink-600" href="#">Service</a>
+                <Link className="hover:text-pink-600" href="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -27,25 +29,25 @@ const FooterComponent = () => {
             <div className="text-sm uppercase text-pink-600 font-bold">Contact Us</div>
             <ul>
               <li className="my-2">
-                <a className="hover:text-pink-600" href="#">Next@gmail.com</a>
+                <Link className="hover:text-pink-600" href="#">Next@gmail.com</Link>
               </li>
               <li className="my-2">
-                <a className="hover:text-pink-600" href="#">contact@company.com</a>
+                <Link className="hover:text-pink-600" href="#">contact@company.com</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="flex py-5 m-auto text-gray-800 text-sm flex-col items-center border-t max-w-screen-xl">
           <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-            <a href="#" className="w-6 mx-1">
+            <Link href="#" className="w-6 mx-1">
               <img src="tweet.svg"></img>
-            </a>
-            <a href="#" className="w-6 mx-1">
+            </Link>
+            <Link href="#" className="w-6 mx-1">
               <img src="facebook.svg"></img>
-            </a>
-            <a href="#" className="w-6 mx-1">
+            </Link>
+            <Link href="#" className="w-6 mx-1">
               <img src="instagram.svg"></img>
-            </a>
+            </Link>
           </div>
           <div className="my-5">© Copyright 2023. All Rights Reserved.</div>
         </div>

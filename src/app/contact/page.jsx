@@ -35,9 +35,6 @@ export default function ContactForm() {
         const templateID = "template_s5ax9fo";
         const publicKey = "T_7h1kANvpJqIY_xq";
 
-
-
-
         emailjs
             .send(serviceID, templateID, formData, publicKey)
             .then(
@@ -58,7 +55,6 @@ export default function ContactForm() {
             <div>
                 <NavbarComponent />
             </div>
-
 
                 <div className="p-4 max-w-md  bg-white shadow rounded-lg" style={{display: 'block', margin: 'auto'}} data-aos="zoom-in">
                     <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
