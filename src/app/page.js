@@ -1,15 +1,26 @@
+"use client"
 import FooterComponent from "@/components/FooterComponent";
 import NavbarComponent from "@/components/NavbarComponent";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+        duration: 800,
+        once: false,
+    })
+}, [])
 
   return (
     <main className="w-full">
       {/* Navbar */}
         <NavbarComponent/>
       {/* content Body */}
-      <div className="container d-block m-auto mt-10">
-        <div className="text-center">
+      <div className="container d-block m-auto mt-10" data-aos="zoom-in">
+        <div className="text-center" >
           <h1 className="text-3xl"><b>Cambodian Based <br></br> Product Photography Service</b></h1>
           <small>Get hight-quality aesthetic photography of your valuable products within few days.</small>
         </div>

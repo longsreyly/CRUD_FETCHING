@@ -1,7 +1,17 @@
-
+"use client"
 import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const FormComponent = ({ customer, onFormSubmit }) => {
+     //animation
+     useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: false,
+        })
+    }, [])
     // Use default values for customer to avoid null errors
     const [formData, setFormData] = useState({
         customerName: customer?.customerName || "",
@@ -27,7 +37,7 @@ const FormComponent = ({ customer, onFormSubmit }) => {
 
 
     return (
-        <main id="content" role="main" className="w-full max-w-md mx-auto p-6">
+        <main id="content" role="main" className="w-full max-w-md mx-auto p-6" data-aos="zoom-in">
             <div className="mt-7 bg-white rounded-xl shadow-lg dark:bg-gray-800 dark:border-gray-700 border-2 border-indigo-300">
                 <div className="p-4 sm:p-7">
                     <div className="text-center">

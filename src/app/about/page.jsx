@@ -1,7 +1,17 @@
+"use client"
 import FooterComponent from "@/components/FooterComponent";
 import NavbarComponent from "@/components/NavbarComponent";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const AboutPage = () => {
+      useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: false,
+        })
+    }, [])
     return (
         <>
             <main className="mx-10">
@@ -52,7 +62,7 @@ const AboutPage = () => {
                         </div>
                     </div>
                     {/* right content */}
-                    <div className="mt-40">
+                    <div className="mt-40" data-aos="fade-left">
                         <p className="text-center">
                             Welcome to Test-Product, where innovation meets quality. We are passionate about providing premium products that enrich your daily life and align with modern aesthetics.
 

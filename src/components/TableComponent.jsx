@@ -1,4 +1,7 @@
-import { useState } from "react";
+"use client"
+import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -7,6 +10,13 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
     const filteredData = customerData.filter((data) =>
         data.customerName.toLowerCase().includes(searchTerm.toLowerCase())
     );
+       //animation
+         useEffect(() => {
+            AOS.init({
+                duration: 800,
+                once: false,
+            })
+        }, [])
 
     return (
         <main>
@@ -41,7 +51,7 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
             </div>
 
             {/* Table */}
-            <div className="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10">
+            <div className="shadow-lg rounded-lg overflow-hidden mx-4 md:mx-10" data-aos="zoom-in-left">
                 <table className="w-full table-fixed">
                     <thead>
                         <tr className="bg-gray-100">

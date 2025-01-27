@@ -7,10 +7,13 @@ import { deleteCustomerServiceAction } from "../action/customerAction";
 import NavbarComponent from "@/components/NavbarComponent";
 
 
+
 const CustomerComponent = () => {
     const [customerData, setCustomerData] = useState([]); // State for customer data
     const [editingCustomer, setEditingCustomer] = useState(null); // State for editing a customer
     const [selectedCustomer, setSelectedCustomer] = useState(null);
+
+   
 
     // Example of setting a default value:
     useEffect(() => {
@@ -65,7 +68,7 @@ const CustomerComponent = () => {
             >
                 <h2 className="text-white">ADD CUSTOMER INTO TABLE</h2>
             </div> */}
-            <div className="grid grid-cols-2 d-flex">
+            <div className="grid grid-cols-2 d-flex" >
                 <div>
                     {/* Form for adding or editing customers */}
                     <FormComponent customer={editingCustomer} onFormSubmit={handleFormSubmit} />
