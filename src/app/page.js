@@ -36,7 +36,7 @@ export default function Home() {
 
       <div className="grid grid-cols-5" style={{ marginTop: "100px" }}>
         <div className="flex px-3 py-3">
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg" >
             <img className="w-full" src="assets/img/gallery/product-1.jpg" alt="Sunset in the mountains" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
@@ -111,7 +111,7 @@ export default function Home() {
 
 
         <div className="flex px-3 py-3">
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg"  >
             <img className="w-full" src="assets/img/gallery/product-4.jpg" alt="Sunset in the mountains" />
             <div className="px-6 py-4">
               <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
@@ -128,6 +128,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+
       <FooterComponent/>
     </main>
   );
