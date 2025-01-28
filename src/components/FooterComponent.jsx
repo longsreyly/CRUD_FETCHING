@@ -16,7 +16,7 @@ const FooterComponent = () => {
                 <Link className="hover:text-pink-600" href="/about">About</Link>
               </li>
               <li className="my-2">
-                <Link className="hover:text-pink-600" href="/contact">Contact</Link>
+                <Link className="hover:text-pink-600" href="/contact">FeedBack</Link>
               </li>
             </ul>
           </div>

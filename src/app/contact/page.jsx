@@ -6,23 +6,12 @@ import 'aos/dist/aos.css';
 
 export default function ContactForm() {
 
-      useEffect(() => {
-        AOS.init({
-            duration: 800,
-            once: false,
-        })
-    }, [])
+    useEffect(() => {AOS.init({duration: 800,once: false,})}, [])
 
-    const [formData, setFormData] = useState({
-        name: "",
-        email: "",
-        message: "",
-    });
+    const [formData, setFormData] = useState({ name: "",email: "",message: "",});
     const [status, setStatus] = useState("");
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+    const handleChange = (e) => {setFormData({ ...formData, [e.target.name]: e.target.value });};
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -35,13 +24,11 @@ export default function ContactForm() {
 
         emailjs
             .send(serviceID, templateID, formData, publicKey)
-            .then(
-                (result) => {
+            .then((result) => {
                     console.log("Email sent successfully:", result.text);
                     setStatus("Email sent successfully!");
                     setFormData({ name: "", email: "", message: "" });
-                },
-                (error) => {
+                },(error) => {
                     console.error("Error sending email:", error.text);
                     setStatus("Failed to send email. Please try again later.");
                 }
