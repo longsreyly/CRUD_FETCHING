@@ -33,15 +33,12 @@ const CustomerComponent = () => {
     };
 
     // Handle customer edit
-    const handleEditCustomer = (customer) => {
-        setEditingCustomer(customer); // Set the customer to edit
-    };
+    const handleEditCustomer = (customer) => {setEditingCustomer(customer);};// Set the customer to edit
 
     // Handle customer delete
     const handleDeleteCustomer = async (customerId) => {
-        const updatedData = await deleteCustomerServiceAction(customerId);
-        setCustomerData(updatedData);  // Update the state with the latest customer data
-    };
+        const updatedData = await deleteCustomerServiceAction(customerId); setCustomerData(updatedData); }; // Update the state with the latest customer data
+
     return (
         <>
         <main className="mx-10">
@@ -59,5 +56,4 @@ const CustomerComponent = () => {
         </>
     );
 };
-
 export default CustomerComponent;

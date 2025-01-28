@@ -16,17 +16,8 @@ const AboutPage = () => {
                 <div className="grid grid-cols-2" style={{ marginTop: '30px' }}>
                     <div id="comp-k0qndu82" className="MazNVa comp-k0qndu82 wixui-image">
                         <div data-testid="linkElement" className="j7pOnl" style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img data-aos="fade-right"
-                                alt="About Page Image"
-                                width="442"
-                                height="547"
-                                src="https://rixincosmetics.com/wp-content/uploads/2024/07/happy-woman-and-skincare-line.webp"
-                                style={{
-                                    width: "442px",
-                                    height: "547px",
-                                    objectFit: "cover",
-                                }}
-                            />
+                            <img data-aos="fade-right" alt="About Page Image"width="442"height="547"
+                                src="https://rixincosmetics.com/wp-content/uploads/2024/07/happy-woman-and-skincare-line.webp"/>
                         </div>
                     </div>
                     {/* right content */}

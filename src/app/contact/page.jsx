@@ -50,51 +50,14 @@ export default function ContactForm() {
 
     return (
         <>
-
                 <div className="p-4 max-w-md  bg-white shadow rounded-lg" style={{display: 'block', margin: 'auto', marginTop: '30px'}} data-aos="zoom-in">
-                    <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
+                    <h1 className="text-2xl font-bold mb-4">Feedback</h1>
                     <form onSubmit={sendEmail}>
-                        <div className="mb-4">
-                            <label htmlFor="name" className="block text-sm font-medium">
-                                Name
-                            </label>
-                            <input
-                                type="text"
-                                id="name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                                className="w-full mt-1 p-2 border rounded"
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <label htmlFor="email" className="block text-sm font-medium">
-                                Email
-                            </label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                                className="w-full mt-1 p-2 border rounded"
-                            />
-                        </div>
                         <div className="mb-4">
                             <label htmlFor="message" className="block text-sm font-medium">
                                 Message
                             </label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                value={formData.message}
-                                onChange={handleChange}
-                                required
-                                rows="4"
-                                className="w-full mt-1 p-2 border rounded"
-                            ></textarea>
+                            <textarea id="message" name="message" value={formData.message} onChange={handleChange} requiredrows="4"className="w-full mt-1 p-2 border rounded"></textarea>
                         </div>
                         <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send Email</button>
                     </form>
