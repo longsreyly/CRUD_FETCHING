@@ -29,7 +29,7 @@ const FooterComponent = () => {
             <div className="text-sm uppercase text-pink-600 font-bold">Contact Us</div>
             <ul>
               <li className="my-2">
-                <Link className="hover:text-pink-600" href="#">Next@gmail.com</Link>
+                <Link className="hover:text-pink-600" href="#">product@gmail.com</Link>
               </li>
               <li className="my-2">
                 <Link className="hover:text-pink-600" href="#">contact@company.com</Link>

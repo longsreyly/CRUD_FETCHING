@@ -56,7 +56,7 @@ export default function ContactForm() {
                 <NavbarComponent />
             </div>
 
-                <div className="p-4 max-w-md  bg-white shadow rounded-lg" style={{display: 'block', margin: 'auto'}} data-aos="zoom-in">
+                <div className="p-4 max-w-md  bg-white shadow rounded-lg" style={{display: 'block', margin: 'auto', marginTop: '30px'}} data-aos="zoom-in">
                     <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
                     <form onSubmit={sendEmail}>
                         <div className="mb-4">
