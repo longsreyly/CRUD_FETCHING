@@ -34,8 +34,6 @@ const FormComponent = ({ customer, onFormSubmit }) => {
         setFormData({ customerName: "", gender: "", address: "" }); // Clear form fields
     };
 
-
-
     return (
         <main id="content" role="main" className="w-full max-w-md mx-auto p-6" data-aos="zoom-in">
             <div className="mt-7 bg-white rounded-xl shadow-lg dark:bg-gray-800 dark:border-gray-700 border-2 border-indigo-300">
@@ -51,9 +49,7 @@ const FormComponent = ({ customer, onFormSubmit }) => {
                             <div className="grid gap-y-4">
                                 {/* Customer Name */}
                                 <div>
-                                    <label htmlFor="customerName" className="block text-sm font-bold ml-1 mb-2 dark:text-white">
-                                        Customer Name
-                                    </label>
+                                    <label htmlFor="customerName" className="block text-sm font-bold ml-1 mb-2 dark:text-white"> Customer Name</label>
                                     <input
                                         id="customerName"
                                         name="customerName"
@@ -66,9 +62,7 @@ const FormComponent = ({ customer, onFormSubmit }) => {
                                 </div>
                                 {/* Gender */}
                                 <div>
-                                    <label htmlFor="gender" className="block text-sm font-bold ml-1 mb-2 dark:text-white">
-                                        Customer Gender
-                                    </label>
+                                    <label htmlFor="gender" className="block text-sm font-bold ml-1 mb-2 dark:text-white">Customer Gender</label>
                                     <select
                                         id="gender"
                                         name="gender"
@@ -84,9 +78,7 @@ const FormComponent = ({ customer, onFormSubmit }) => {
                                 </div>
                                 {/* Address */}
                                 <div>
-                                    <label htmlFor="address" className="block text-sm font-bold ml-1 mb-2 dark:text-white">
-                                        Customer Address
-                                    </label>
+                                    <label htmlFor="address" className="block text-sm font-bold ml-1 mb-2 dark:text-white"> Customer Address</label>
                                     <input
                                         id="address"
                                         name="address"

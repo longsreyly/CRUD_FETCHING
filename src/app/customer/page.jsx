@@ -14,7 +14,6 @@ const CustomerComponent = () => {
     const [editingCustomer, setEditingCustomer] = useState(null); // State for editing a customer
     const [selectedCustomer, setSelectedCustomer] = useState(null);
 
-   
 
     // Example of setting a default value:
     useEffect(() => {if (!selectedCustomer) { setSelectedCustomer({ customerName: "", gender: "", address: "" });}},[selectedCustomer]);
@@ -47,8 +46,6 @@ const CustomerComponent = () => {
         const updatedData = await deleteCustomerServiceAction(customerId);
         setCustomerData(updatedData);  // Update the state with the latest customer data
     };
-
-
     return (
         <>
         <NavbarComponent/>

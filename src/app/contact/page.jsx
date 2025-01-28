@@ -101,18 +101,10 @@ export default function ContactForm() {
                                 className="w-full mt-1 p-2 border rounded"
                             ></textarea>
                         </div>
-                        <button
-                            type="submit"
-                            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-                        >
-                            Send Email
-                        </button>
+                        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send Email</button>
                     </form>
                     {status && <p className="mt-4 text-sm">{status}</p>}
-
                 </div>
-          
-       
             <FooterComponent />
         </>
     );
