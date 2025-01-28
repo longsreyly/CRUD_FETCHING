@@ -14,8 +14,8 @@ const AboutPage = () => {
     }, [])
     return (
         <>
+            <NavbarComponent />
             <main className="mx-10">
-                <NavbarComponent />
                 <div className="grid grid-cols-2" style={{ marginTop: '30px' }}>
                     <div
                         id="comp-k0qndu82"
@@ -66,8 +66,6 @@ const AboutPage = () => {
                             />
                         </div>
                     </div>
-
-                   
                 </div>
             </main>
             <FooterComponent />

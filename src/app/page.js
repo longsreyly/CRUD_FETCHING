@@ -32,13 +32,9 @@ export default function Home() {
     {title:"romand mood",img: "assets/img/gallery/romand5.jpg" },
 
   ]
-  
-
   useEffect(() => {
     AOS.init({ duration: 800, once: false, });
   }, []);
-
-
   return (
     <main className="w-full">
       <NavbarComponent />
@@ -96,16 +92,10 @@ export default function Home() {
                   <span className="block opacity-75 -mb-1">{stick.title}</span>
               </div>
           </div>
-          ))}
-         
+          ))}        
         </div>
       </section>
       <FooterComponent />
-
-
-   
-  
-    
     </main>
   );
 }

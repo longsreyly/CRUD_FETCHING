@@ -17,20 +17,9 @@ const CustomerComponent = () => {
    
 
     // Example of setting a default value:
-    useEffect(() => {
-        if (!selectedCustomer) {
-            setSelectedCustomer({ customerName: "", gender: "", address: "" });
-        }
-    }, [selectedCustomer]);
-
+    useEffect(() => {if (!selectedCustomer) { setSelectedCustomer({ customerName: "", gender: "", address: "" });}},[selectedCustomer]);
     // Fetch customer data on component mount
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await getAllCustomerService();
-            setCustomerData(data);
-        };
-        fetchData();
-    }, []);
+    useEffect(() => {const fetchData = async () => {const data = await getAllCustomerService();setCustomerData(data);};fetchData();},[]);
 
     // Handle form submission for adding/updating customers
     const handleFormSubmit = async (data) => {
@@ -61,14 +50,9 @@ const CustomerComponent = () => {
 
 
     return (
+        <>
+        <NavbarComponent/>
         <main className="mx-10">
-            <NavbarComponent/>
-            {/* <div
-                className="alert table_title text-center"
-                style={{ backgroundColor: "gray", color: "#0d6efd", padding: "10px", borderRadius: "5px" }}
-            >
-                <h2 className="text-white">ADD CUSTOMER INTO TABLE</h2>
-            </div> */}
             <div className="grid grid-cols-2 d-flex" >
                 <div>
                     {/* Form for adding or editing customers */}
@@ -80,8 +64,9 @@ const CustomerComponent = () => {
                     <TableComponent customerData={customerData} onEditCustomer={handleEditCustomer} onDeleteCustomer={handleDeleteCustomer} />
                 </div>
             </div>
-            <FooterComponent/>
         </main>
+         <FooterComponent/>
+        </>
     );
 };
 
