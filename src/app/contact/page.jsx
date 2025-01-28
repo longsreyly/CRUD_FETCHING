@@ -1,8 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
-import NavbarComponent from "@/components/NavbarComponent";
-import FooterComponent from "@/components/FooterComponent";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -52,9 +50,6 @@ export default function ContactForm() {
 
     return (
         <>
-            <div>
-                <NavbarComponent />
-            </div>
 
                 <div className="p-4 max-w-md  bg-white shadow rounded-lg" style={{display: 'block', margin: 'auto', marginTop: '30px'}} data-aos="zoom-in">
                     <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
@@ -105,7 +100,7 @@ export default function ContactForm() {
                     </form>
                     {status && <p className="mt-4 text-sm">{status}</p>}
                 </div>
-            <FooterComponent />
+      
         </>
     );
 }

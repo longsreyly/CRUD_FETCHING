@@ -4,10 +4,6 @@ import { useEffect, useState } from "react";
 import FormComponent from "./_component/FormComponent";
 import TableComponent from "@/components/TableComponent";
 import { deleteCustomerServiceAction } from "../action/customerAction";
-import NavbarComponent from "@/components/NavbarComponent";
-import FooterComponent from "@/components/FooterComponent";
-
-
 
 const CustomerComponent = () => {
     const [customerData, setCustomerData] = useState([]); // State for customer data
@@ -48,7 +44,6 @@ const CustomerComponent = () => {
     };
     return (
         <>
-        <NavbarComponent/>
         <main className="mx-10">
             <div className="grid grid-cols-2 d-flex" >
                 <div>
@@ -62,7 +57,6 @@ const CustomerComponent = () => {
                 </div>
             </div>
         </main>
-         <FooterComponent/>
         </>
     );
 };

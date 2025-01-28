@@ -37,7 +37,6 @@ export default function Home() {
   }, []);
   return (
     <main className="w-full">
-      <NavbarComponent />
       <section className="container d-block m-auto mt-10" data-aos="zoom-in">
         <div className="text-center">
           <h1 className="text-3xl"> <b>Cambodian Based <br /> Product Photography Service</b></h1>
@@ -95,7 +94,6 @@ export default function Home() {
           ))}        
         </div>
       </section>
-      <FooterComponent />
     </main>
   );
 }
