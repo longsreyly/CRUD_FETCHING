@@ -49,7 +49,6 @@ const CustomerComponent = () => {
                 <div>
                     {/* Form for adding or editing customers */}
                     <FormComponent customer={editingCustomer} onFormSubmit={handleFormSubmit} />
-
                 </div>
                 <div>
                     <h1 className="mb-[35px]"></h1>
