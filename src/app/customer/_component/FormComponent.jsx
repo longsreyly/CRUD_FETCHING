@@ -6,12 +6,7 @@ import 'aos/dist/aos.css';
 
 const FormComponent = ({ customer, onFormSubmit }) => {
      //animation
-     useEffect(() => {
-        AOS.init({
-            duration: 800,
-            once: false,
-        })
-    }, [])
+     useEffect(() => {AOS.init({ duration: 800,once: false, })},[])
     // Use default values for customer to avoid null errors
     const [formData, setFormData] = useState({
         customerName: customer?.customerName || "",
@@ -92,8 +87,7 @@ const FormComponent = ({ customer, onFormSubmit }) => {
                                 {/* Submit Button */}
                                 <button
                                     type="submit"
-                                    className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md max-w-xs border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600"
-                                >
+                                    className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md max-w-xs border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600" >
                                     {customer ? "Update Customer" : "Add Customer"}
                                 </button>
                             </div>
