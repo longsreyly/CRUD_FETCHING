@@ -36,14 +36,14 @@ export default function ContactForm() {
 
     return (
         <>
-            <div className="p-4 max-w-md  bg-white shadow rounded-lg" style={{ display: 'block', margin: 'auto', marginTop: '30px' }} data-aos="zoom-in">
+            <div className=" border-1 border-indigo-300 p-4 max-w-md  bg-white shadow rounded-lg " style={{ display: 'block', margin: 'auto', marginTop: '30px' }} data-aos="zoom-in">
                 <h1 className="text-2xl font-bold mb-4">Feedback</h1>
                 <form onSubmit={sendEmail}>
                     <div className="mb-4">
                         <label htmlFor="message" className="block text-sm font-medium">
                             Message
                         </label>
-                        <textarea id="message" name="message" value={formData.message} onChange={handleChange} requiredrows="4" className="w-full mt-1 p-2 border rounded" style={{ height: '300px' }}></textarea>
+                        <textarea id="message" name="message" value={formData.message} onChange={handleChange} requiredrows="4" className="border-1 border-indigo-300 w-full mt-1 p-2 border rounded" style={{ height: '300px' }}></textarea>
                     </div>
                     <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send Email</button>
                 </form>
