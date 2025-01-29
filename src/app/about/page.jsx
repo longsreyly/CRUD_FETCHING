@@ -1,15 +1,8 @@
 "use client"
-import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from "react";
 
 const AboutPage = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 800,
-            once: false,
-        })
-    }, [])
+
     return (
         <>
             <main className="mx-10">

@@ -1,12 +1,9 @@
 "use client"
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function ContactForm() {
-
-    useEffect(() => { AOS.init({ duration: 800, once: false, }) }, [])
 
     const [formData, setFormData] = useState({ name: "", email: "", message: "", });
     const [status, setStatus] = useState("");
