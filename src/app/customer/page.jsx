@@ -14,7 +14,11 @@ const CustomerComponent = () => {
     // Example of setting a default value:
     useEffect(() => {if (!selectedCustomer) { setSelectedCustomer({ customerName: "", gender: "", address: "" });}},[selectedCustomer]);
     // Fetch customer data on component mount
-    useEffect(() => {const fetchData = async () => {const data = await getAllCustomerService();setCustomerData(data);};fetchData();},[]);
+    useEffect(() => {
+        const fetchData = async () => {
+        const data = await getAllCustomerService();
+        setCustomerData(data);
+    };fetchData();},[]);
 
     // Handle form submission for adding/updating customers
     const handleFormSubmit = async (data) => {
