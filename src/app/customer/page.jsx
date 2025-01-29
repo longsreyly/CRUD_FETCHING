@@ -2,7 +2,7 @@
 import { getAllCustomerService, insertCustomerService, updateCustomerService } from "@/service/customer.service";
 import { useEffect, useState } from "react";
 import FormComponent from "./_component/FormComponent";
-import TableComponent from "@/components/TableComponent";
+import TableComponent from "@/app/customer/_component/TableComponent";
 import { deleteCustomerServiceAction } from "../action/customerAction";
 
 const CustomerComponent = () => {

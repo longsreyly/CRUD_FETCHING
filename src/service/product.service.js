@@ -11,3 +11,10 @@ export const getAllCategorieService = async () =>{
     const data = await res.json();
     return data;
 }
+
+//Get All Customer 
+export const getAllCustomerService = async () => {
+    const res = await fetch("https://api.escuelajs.co/api/v1/users");
+    const data = await res.json();
+    return data;
+}

@@ -17,7 +17,7 @@ const AboutPage = () => {
                     <div id="comp-k0qndu82" className="MazNVa comp-k0qndu82 wixui-image">
                         <div data-testid="linkElement" className="j7pOnl" style={{ display: 'flex', justifyContent: 'center' }}>
                             <img data-aos="fade-right" alt="About Page Image"width="442"height="547"
-                                src="https://rixincosmetics.com/wp-content/uploads/2024/07/happy-woman-and-skincare-line.webp"/>
+                              src="assets/img/gallery/about.jpg" style={{width: "500px", marginTop:'100px'}}/>
                         </div>
                     </div>
                     {/* right content */}
@@ -40,7 +40,7 @@ const AboutPage = () => {
                     {/* image */}
                     <div id="comp-k0qndu82" className="MazNVa comp-k0qndu82 wixui-image">
                         <div data-testid="linkElement" className="j7pOnl" style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img data-aos="fade-right" alt="About Page Image" src="assets/img/gallery/about.webp" style={{width: "500px", marginTop:'100px'}}/>
+                            <img data-aos="fade-right" alt="About Page Image" src="assets/img/gallery/about1.jpg" style={{width: "500px", marginTop:'100px'}}/>
                         </div>
                     </div>
                 </div>
