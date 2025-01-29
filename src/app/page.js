@@ -1,6 +1,4 @@
 "use client";
-import NavbarComponent from "@/components/NavbarComponent";
-import FooterComponent from "@/components/FooterComponent";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
