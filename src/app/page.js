@@ -47,7 +47,7 @@ export default function Home() {
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <button className="mt-8 rounded-xl bg-pink-400 py-3 px-6 font-dm text-base font-medium text-white shadow-xl shadow-pink-400/75 transition-transform duration-200 ease-in-out hover:scale-[1.02]" href="#">
-            Booking
+            View Details
           </button>
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function Home() {
               </div>
             ))
           ) : (
-            <div>Loading...</div> // Loading state if products are not available yet
+            <div className="text-center">Loading...</div> // Loading state if products are not available yet
           )}
         </div>
       </section>
@@ -104,7 +104,7 @@ export default function Home() {
               </div>
             ))
           ) : (
-            <div>Loading...</div> // Loading state if category are not available yet
+            <div className="text-center">Loading...</div> // Loading state if category are not available yet
           )}
         </div>
       </section>
