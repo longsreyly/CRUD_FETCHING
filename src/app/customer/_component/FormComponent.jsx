@@ -1,32 +1,47 @@
-"use client"
-import { useState, useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
+"use client";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useForm } from "react-hook-form";
 
 const FormComponent = ({ customer, onFormSubmit }) => {
-     //animation
-     useEffect(() => {AOS.init({ duration: 800,once: false, })},[])
-    // Use default values for customer to avoid null errors
-    const [formData, setFormData] = useState({
-        customerName: customer?.customerName || "",
-        gender: customer?.gender || "",
-        address: customer?.address || "",
+    // Initialize react-hook-form
+    const {
+        register,
+        handleSubmit,
+        reset, // ✅ Use reset to update form values
+        formState: { errors },
+    } = useForm({
+        defaultValues: {
+            customerName: "",
+            gender: "",
+            address: "",
+        },
     });
 
+    // Update form fields when customer changes (for edit mode)
     useEffect(() => {
-        setFormData({
-            customerName: customer?.customerName || "",
-            gender: customer?.gender || "",
-            address: customer?.address || "",
-        });
-    }, [customer]); // Update formData whenever customer changes
+        if (customer) {
+            reset({
+                customerName: customer.customerName || "",
+                gender: customer.gender || "",
+                address: customer.address || "",
+            });
+        } else {
+            reset({ customerName: "", gender: "", address: "" }); // ✅ Ensure form resets properly
+        }
+    }, [customer, reset]);
 
-    // Handal on button add vustomer
-    const handleSubmit = async (e) => {
-        e.preventDefault(); // Prevent page reload
-        await onFormSubmit(formData); // Submit form data to parent
-        setFormData({ customerName: "", gender: "", address: "" }); // Clear form fields
+
+    // Animation effect
+    useEffect(() => {
+        AOS.init({ duration: 800, once: false });
+    }, []);
+
+    // Handle form submission
+    const onSubmit = async (data) => {
+        await onFormSubmit(data); // Pass form data to parent component
+        reset(); // Clear form fields after submission
     };
 
     return (
@@ -39,30 +54,34 @@ const FormComponent = ({ customer, onFormSubmit }) => {
                         </h1>
                     </div>
                     <div className="mt-5">
-                        <form
-                            onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="grid gap-y-4">
                                 {/* Customer Name */}
                                 <div>
-                                    <label htmlFor="customerName" className="block text-sm font-bold ml-1 mb-2 dark:text-white"> Customer Name</label>
+                                    <label htmlFor="customerName" className="block text-sm font-bold ml-1 mb-2 dark:text-white">
+                                        Customer Name
+                                    </label>
                                     <input
                                         id="customerName"
-                                        name="customerName"
                                         type="text"
-                                        value={formData.customerName}
-                                        onChange={(e) => setFormData({ ...formData, customerName: e.target.value })}
+                                        {...register("customerName", {
+                                            required: "Customer name is required",
+                                            minLength: { value: 3, message: "Name must be at least 3 characters" },
+                                        })}
                                         className="input input-bordered input-primary w-full max-w-xs"
                                         style={{ border: "1px solid", borderRadius: "5px" }}
                                     />
+                                    {errors.customerName && <p className="text-red-500 text-xs mt-1">{errors.customerName.message}</p>}
                                 </div>
+
                                 {/* Gender */}
                                 <div>
-                                    <label htmlFor="gender" className="block text-sm font-bold ml-1 mb-2 dark:text-white">Customer Gender</label>
+                                    <label htmlFor="gender" className="block text-sm font-bold ml-1 mb-2 dark:text-white">
+                                        Customer Gender
+                                    </label>
                                     <select
                                         id="gender"
-                                        name="gender"
-                                        value={formData.gender}
-                                        onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
+                                        {...register("gender", { required: "Please select gender" })}
                                         className="input input-bordered input-primary w-full max-w-xs"
                                         style={{ border: "1px solid", borderRadius: "5px" }}
                                     >
@@ -70,24 +89,29 @@ const FormComponent = ({ customer, onFormSubmit }) => {
                                         <option value="Female">Female</option>
                                         <option value="Male">Male</option>
                                     </select>
+                                    {errors.gender && <p className="text-red-500 text-xs mt-1">{errors.gender.message}</p>}
                                 </div>
+
                                 {/* Address */}
                                 <div>
-                                    <label htmlFor="address" className="block text-sm font-bold ml-1 mb-2 dark:text-white"> Customer Address</label>
+                                    <label htmlFor="address" className="block text-sm font-bold ml-1 mb-2 dark:text-white">
+                                        Customer Address
+                                    </label>
                                     <input
                                         id="address"
-                                        name="address"
                                         type="text"
-                                        value={formData.address}
-                                        onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                                        {...register("address", { required: "Address is required" })}
                                         className="input input-bordered input-primary w-full max-w-xs"
                                         style={{ border: "1px solid", borderRadius: "5px" }}
                                     />
+                                    {errors.address && <p className="text-red-500 text-xs mt-1">{errors.address.message}</p>}
                                 </div>
+
                                 {/* Submit Button */}
                                 <button
                                     type="submit"
-                                    className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md max-w-xs border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600" >
+                                    className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md max-w-xs border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600"
+                                >
                                     {customer ? "Update Customer" : "Add Customer"}
                                 </button>
                             </div>

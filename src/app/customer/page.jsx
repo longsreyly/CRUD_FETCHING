@@ -10,7 +10,6 @@ const CustomerComponent = () => {
     const [editingCustomer, setEditingCustomer] = useState(null); // State for editing a customer
     const [selectedCustomer, setSelectedCustomer] = useState(null);
 
-
     // Example of setting a default value:
     useEffect(() => {if (!selectedCustomer) { setSelectedCustomer({ customerName: "", gender: "", address: "" });}},[selectedCustomer]);
     // Fetch customer data on component mount
@@ -23,18 +22,21 @@ const CustomerComponent = () => {
     // Handle form submission for adding/updating customers
     const handleFormSubmit = async (data) => {
         if (editingCustomer) {
-            // Update existing customer
             const updatedCustomer = await updateCustomerService(editingCustomer.id, data);
+            
             setCustomerData((prev) =>
                 prev.map((customer) => (customer.id === editingCustomer.id ? updatedCustomer : customer))
             );
+    
+            setEditingCustomer(null); // ✅ Reset editing state to trigger form reset
         } else {
-            // Add new customer
             const newCustomer = await insertCustomerService(data);
             setCustomerData((prev) => [...prev, newCustomer]);
         }
-        setEditingCustomer(null); // Reset edit state
     };
+    
+      
+
 
     // Handle customer edit
     const handleEditCustomer = (customer) => {setEditingCustomer(customer);};// Set the customer to edit
