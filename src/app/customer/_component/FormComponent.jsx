@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import { useForm } from "react-hook-form";
 
@@ -9,7 +8,7 @@ const FormComponent = ({ customer, onFormSubmit }) => {
     const {
         register,
         handleSubmit,
-        reset, // ✅ Use reset to update form values
+        reset, //Use reset to update form values
         formState: { errors },
     } = useForm({
         defaultValues: {
@@ -28,7 +27,7 @@ const FormComponent = ({ customer, onFormSubmit }) => {
                 address: customer.address || "",
             });
         } else {
-            reset({ customerName: "", gender: "", address: "" }); // ✅ Ensure form resets properly
+            reset({ customerName: "", gender: "", address: "" }); //Ensure form resets properly
         }
     }, [customer, reset]);
 
