@@ -17,7 +17,7 @@ const AboutPage = () => {
                     <div id="comp-k0qndu82" className="MazNVa comp-k0qndu82 wixui-image">
                         <div data-testid="linkElement" className="j7pOnl" style={{display: 'flex', justifyContent: 'center' }}>
                             <img data-aos="fade-right" alt="About Page Image"width="442"height="547"
-                              src="assets/img/gallery/about1.jpg" style={{width: "500px", marginTop:'100px'}}/>
+                              src="assets/img/gallery/about.jpg" style={{width: "500px", marginTop:'100px'}}/>
                         </div>
                     </div>
                     {/* right content */}
