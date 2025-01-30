@@ -138,7 +138,7 @@ export default function Home() {
       {/* Customer image */}
       <section style={{ width: '100px', display: 'block', margin: 'auto' }}>
         <div className="mt-10">
-          <h1 className="text-center text-xl ">
+          <h1 className="text-center text-xl">
             <b>our teams</b>
           </h1>
         </div>
