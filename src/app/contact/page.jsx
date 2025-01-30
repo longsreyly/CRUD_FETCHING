@@ -40,21 +40,31 @@ export default function ContactForm() {
     };
 
     return (
-        <>
-            <div className=" border-1 border-indigo-300 p-4 max-w-md  bg-white shadow rounded-lg " style={{ display: 'block', margin: 'auto', marginTop: '30px' }} data-aos="zoom-in">
-                <h1 className="text-2xl font-bold mb-4">Feedback</h1>
-                <form onSubmit={sendEmail}>
-                    <div className="mb-4">
-                        <label htmlFor="message" className="block text-sm font-medium">
-                            Message
-                        </label>
-                        <textarea id="message" name="message" value={formData.message} onChange={handleChange} requiredrows="4" className="border-1 border-indigo-300 w-full mt-1 p-2 border rounded" style={{ height: '300px' }}></textarea>
-                    </div>
-                    <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send Email</button>
-                </form>
-                {status && <p className="mt-4 text-sm">{status}</p>}
+        <section className="text-gray-700 body-font relative">
+            <div className="absolute inset-0 bg-gray-300">
+                <iframe width="100%" height="100%"
+                    src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=Phnom%20Penh,Cambodia&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                    style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.4)' }}>
+                </iframe>
             </div>
+            <div className="container px-5 py-24 mx-auto flex">
+                <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10">
+                    <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
+                    <small className="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</small>
+                    <form onSubmit={sendEmail}>
+                        <div className="mb-4">
+                            <label htmlFor="message" className="block text-sm font-medium">
+                                Message
+                            </label>
+                            <textarea id="message" name="message" value={formData.message} onChange={handleChange} requiredrows="4" className="border-1 border-indigo-300 w-full mt-1 p-2 border rounded" style={{ height: '200px' }}></textarea>
+                        </div>
+                        <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send Email</button>
+                        <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
+                    </form>
+                    {status && <p className="mt-4 text-sm">{status}</p>}
+                </div>
+            </div>
+        </section>
 
-        </>
     );
 }

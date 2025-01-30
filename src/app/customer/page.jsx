@@ -28,7 +28,7 @@ const CustomerComponent = () => {
                 prev.map((customer) => (customer.id === editingCustomer.id ? updatedCustomer : customer))
             );
     
-            setEditingCustomer(null); // ✅ Reset editing state to trigger form reset
+            setEditingCustomer(null); //Reset editing state to trigger form reset
         } else {
             const newCustomer = await insertCustomerService(data);
             setCustomerData((prev) => [...prev, newCustomer]);
