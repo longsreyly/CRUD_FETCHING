@@ -67,18 +67,16 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
                                     <td className="py-4 px-6 border-b border-gray-200 text-center">{data.gender}</td>
                                     <td className="py-4 px-6 border-b border-gray-200 truncate text-center">{data.address}</td>
                                     <td className="px-6 py-4 whitespace-nowrap">
-                                        <div className="d-flex">
-                                            <button onClick={() => onEditCustomer(data)} className="ml-4 py-1 px-3 text-sm text-white bg-green-500 rounded hover:bg-green-600">Edit</button>
-                                            <button onClick={() => onDeleteCustomer(data.id)} className="ml-4 py-1 px-3 text-sm text-white bg-red-500 rounded hover:bg-red-600">Delete</button>
+                                        <div className="d-flex ">
+                                            <button onClick={() => onEditCustomer(data)} className="ml-2 py-1 px-3 text-sm text-white bg-green-500 rounded hover:bg-green-600">Edit</button>
+                                            <button onClick={() => onDeleteCustomer(data.id)} className="ml-2 py-1 px-3 text-sm text-white bg-red-500 rounded hover:bg-red-600">Delete</button>
                                         </div>
                                     </td>
                                 </tr>
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="4" className="text-center py-4 text-gray-500 font-medium">
-                                    No results found
-                                </td>
+                                <td colSpan="4" className="text-center py-4 text-gray-500 font-medium">No results found</td>
                             </tr>
                         )}
                     </tbody>
