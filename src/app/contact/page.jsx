@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 export default function ContactForm() {
 
@@ -9,6 +10,13 @@ export default function ContactForm() {
     const [status, setStatus] = useState("");
 
     const handleChange = (e) => { setFormData({ ...formData, [e.target.name]: e.target.value }); };
+    // Handle animation
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+            once: false,
+        });
+    }, []);
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -22,7 +30,7 @@ export default function ContactForm() {
         emailjs.send(serviceID, templateID, formData, publicKey)
             .then((result) => {
                 console.log("Email sent successfully:", result.text);
-                setStatus("Email sent successfully!");
+                setStatus("Email sent successfully!🎉");
                 setFormData({ name: "", email: "", message: "" });
             }, (error) => {
                 console.error("Error sending email:", error.text);
