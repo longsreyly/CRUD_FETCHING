@@ -1,7 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import { useState } from "react";
+import AnimationComponent from "@/components/AnimationComponent";
 
 const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -22,12 +21,7 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
     const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
     // Handle animation
-    useEffect(() => {
-        AOS.init({
-            duration: 800,
-            once: false,
-        });
-    }, []);
+    AnimationComponent();
 
     // Change page handler
     const handlePageChange = (pageNumber) => {

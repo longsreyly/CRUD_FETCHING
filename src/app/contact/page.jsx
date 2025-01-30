@@ -1,10 +1,11 @@
 "use client";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import emailjs from "emailjs-com";
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+
+import AnimationComponent from "@/components/AnimationComponent";
 
 export default function ContactForm() {
+    AnimationComponent();
     const [formData, setFormData] = useState({
         email: "",
         message: "",
@@ -16,9 +17,6 @@ export default function ContactForm() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    useEffect(() => {
-        AOS.init({ duration: 800, once: false });
-    }, []);
 
     const sendEmail = (e) => {
         e.preventDefault();

@@ -1,15 +1,8 @@
 "use client"
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from "react";
+import AnimationComponent from '@/components/AnimationComponent';
 
 const AboutPage = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 800,
-            once: false,
-        })
-    }, [])
+   AnimationComponent();
     return (
         <>
             <main className="mx-10">
