@@ -51,7 +51,7 @@ export default function Home() {
           <small>Get high-quality aesthetic  of your valuable products within a few days.</small>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <button    onClick={() => setIsOpen(true)} className="mt-8 rounded-xl bg-pink-400 py-3 px-6 font-dm text-base font-medium text-white shadow-xl shadow-pink-400/75 transition-transform duration-200 ease-in-out hover:scale-[1.02]" href="#">
+          <button onClick={() => setIsOpen(true)} className="mt-8 rounded-xl bg-pink-400 py-3 px-6 font-dm text-base font-medium text-white shadow-xl shadow-pink-400/75 transition-transform duration-200 ease-in-out hover:scale-[1.02]" href="#">
             View Details
           </button>
         </div>
@@ -62,10 +62,10 @@ export default function Home() {
           <div className="bg-white rounded-lg p-6 w-1/3 shadow-lg">
             <h2 className="text-2xl font-bold text-center mb-4">Product Details</h2>
             <p className="text-gray-600 text-center"><b>Sorry don't have product details.🙂‍</b></p>
-            
+
             {/* Close Button */}
             <div className="mt-6 text-center">
-              <button onClick={() => setIsOpen(false)}className="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition" >Close</button>
+              <button onClick={() => setIsOpen(false)} className="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition" >Close</button>
             </div>
           </div>
         </div>
@@ -96,7 +96,9 @@ export default function Home() {
               </div>
             ))
           ) : (
-            <div className="text-center">Loading...</div> // Loading state if products are not available yet
+            <div className="text-center">
+              <span className="loading loading-infinity loading-xs"></span>
+            </div> // Loading state if products are not available yet
           )}
         </div>
       </section>
@@ -123,7 +125,9 @@ export default function Home() {
               </div>
             ))
           ) : (
-            <div className="text-center">Loading...</div> // Loading state if category are not available yet
+            <div className="text-center">
+              <span className="loading loading-infinity loading-xs"></span>
+            </div> // Loading state if category are not available yet
           )}
         </div>
       </section>
@@ -154,7 +158,9 @@ export default function Home() {
               </div>
             ))
           ) : (
-            <div className="text-center">Loading...</div> // Loading state if customer are not available yet
+            <div className="text-center">
+               <span className="loading loading-infinity loading-xs"></span>
+            </div> // Loading state if customer are not available yet
           )}
         </div>
       </section>
