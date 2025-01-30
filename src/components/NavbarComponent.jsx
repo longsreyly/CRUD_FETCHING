@@ -8,15 +8,15 @@ const NavbarComponent = () => {
   return (
     <nav className="bg-gray-100 border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="#" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOr0L5Iu3vA3XW-NHNKAQWkItdF4UhK5-REg&s" className="h-8 mr-3 rounded-2xl " alt="Flowbite Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Fake-Store</span>
         </Link>
         <div className="flex md:order-2">
-          <a className="ml-5 block  px-3  text-center bg-pink-400 border rounded-2 text-white  hover:bg-pink-500 hover:text-gray-100 dark:text-gray-200 dark:bg-pink-500 px-4 py-3  text-xs text-center text-white font-semibold bg-pink-400 hover:bg-pink-500  rounded-xl"
+          <Link className="ml-5 block  px-3  text-center bg-pink-400 border rounded-2 text-white  hover:bg-pink-500 hover:text-gray-100 dark:text-gray-200 dark:bg-pink-500 px-4 py-3  text-xs text-center text-white font-semibold bg-pink-400 hover:bg-pink-500  rounded-xl"
             href="/customer">
             Add Customer
-          </a>
+          </Link>
 
           <button
             data-collapse-toggle="navbar-search"
