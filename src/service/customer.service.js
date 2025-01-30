@@ -13,10 +13,8 @@ export const insertCustomerService = async (newCustomer) => {
             body: JSON.stringify(newCustomer),
             headers: {
                 "Content-Type" : "application/json",
-
            }
-        }
-        
+        } 
     );
     const data = await res.json();
     return data;
@@ -56,7 +54,6 @@ export const updateCustomerService = async (customerId, updatedData) => {
 
         // Parse the response as JSON
         const data = await res.json();
-
         // Return the updated customer data
         return data;
     } catch (error) {
