@@ -15,14 +15,12 @@ const AboutPage = () => {
                 <div className="flex justify-center">
                     <img data-aos="fade-right" alt="About Page Image" src="assets/img/gallery/about.jpg" className="w-[500px] mt-24" />
                 </div>
-
                 {/* Right Content */}
                 {[1, 2].map((id) => (
                     <div key={id} className="mt-40" data-aos="fade-left">
                         <p className="text-center">{content}</p>
                     </div>
                 ))}
-
                 {/* Right Image */}
                 <div className="flex justify-center">
                     <img data-aos="fade-right" alt="About Page Image" src="assets/img/gallery/about1.jpg" className="w-[500px] mt-24" />
