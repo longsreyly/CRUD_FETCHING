@@ -23,11 +23,9 @@ const CustomerComponent = () => {
     const handleFormSubmit = async (data) => {
         if (editingCustomer) {
             const updatedCustomer = await updateCustomerService(editingCustomer.id, data);
-            
             setCustomerData((prev) =>
                 prev.map((customer) => (customer.id === editingCustomer.id ? updatedCustomer : customer))
-            );
-    
+            );   
             setEditingCustomer(null); //Reset editing state to trigger form reset
         } else {
             const newCustomer = await insertCustomerService(data);
@@ -35,22 +33,15 @@ const CustomerComponent = () => {
         }
     };
     
-      
-
-
     // Handle customer edit
     const handleEditCustomer = (customer) => {setEditingCustomer(customer);};// Set the customer to edit
-
     // Handle customer delete
     const handleDeleteCustomer = async (customerId) => {
         const updatedData = await deleteCustomerServiceAction(customerId); setCustomerData(updatedData); }; // Update the state with the latest customer data
-
     return (
-        <>
         <main className="mx-10">
             <div className="grid grid-cols-2 d-flex" >
                 <div>
-                    {/* Form for adding or editing customers */}
                     <FormComponent customer={editingCustomer} onFormSubmit={handleFormSubmit} />
                 </div>
                 <div>
@@ -58,8 +49,7 @@ const CustomerComponent = () => {
                     <TableComponent customerData={customerData} onEditCustomer={handleEditCustomer} onDeleteCustomer={handleDeleteCustomer} />
                 </div>
             </div>
-        </main>
-        </>
+        </main>     
     );
 };
 export default CustomerComponent;
