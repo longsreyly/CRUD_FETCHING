@@ -18,7 +18,6 @@ const FormComponent = ({ customer, onFormSubmit }) => {
         }
     }, [customer, reset]);
 
-
     // Handle form submission
     const onSubmit = async (data) => {
         await onFormSubmit(data); // Pass form data to parent component
