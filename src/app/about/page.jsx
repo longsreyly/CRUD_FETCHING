@@ -1,44 +1,35 @@
-"use client"
+"use client";
 import AnimationComponent from '@/components/AnimationComponent';
 
 const AboutPage = () => {
-   AnimationComponent();
-    return (
-        <>
-            <main className="mx-10">
-                <div className="grid grid-cols-2" style={{ marginTop: '30px' }}>
-                    <div id="comp-k0qndu82" className="MazNVa comp-k0qndu82 wixui-image">
-                        <div data-testid="linkElement" className="j7pOnl" style={{display: 'flex', justifyContent: 'center' }}>
-                            <img data-aos="fade-right" alt="About Page Image"width="442"height="547"
-                              src="assets/img/gallery/about.jpg" style={{width: "500px", marginTop:'100px'}}/>
-                        </div>
-                    </div>
-                    {/* right content */}
-                    <div className="mt-40" data-aos="fade-left">
-                        <p className="text-center">
-                            Welcome to Test-Product, where innovation meets quality. We are passionate about providing premium products that enrich your daily life and align with modern aesthetics.
-                            At Test-Product, we believe in creating value for our customers by blending creativity, functionality, and sustainability. Each product is crafted with meticulous attention to detail, ensuring not only exceptional design but also enduring performance.
-                            Founded on the principles of trust and excellence, our mission is to inspire and empower individuals through products that make a difference. Whether you’re looking for solutions to elevate your lifestyle or seeking unique designs to express your personality, we are here to serve you.
-                        </p>
-                    </div>
-                     {/* right content */}
-                     <div className="mt-40" data-aos="fade-left">
-                        <p className="text-center">
-                            Welcome to Test-Product, where innovation meets quality. We are passionate about providing premium products that enrich your daily life and align with modern aesthetics.
-                            At Test-Product, we believe in creating value for our customers by blending creativity, functionality, and sustainability. Each product is crafted with meticulous attention to detail, ensuring not only exceptional design but also enduring performance.
-                            Founded on the principles of trust and excellence, our mission is to inspire and empower individuals through products that make a difference. Whether you’re looking for solutions to elevate your lifestyle or seeking unique designs to express your personality, we are here to serve you.
-                        </p>
-                    </div>
+    const content = `Welcome to Test-Product, where innovation meets quality. We are passionate about providing premium products that enrich your daily life and align with modern aesthetics.
+    At Test-Product, we believe in creating value for our customers by blending creativity, functionality, and sustainability. Each product is crafted with meticulous attention to detail, ensuring not only exceptional design but also enduring performance.
+    Founded on the principles of trust and excellence, our mission is to inspire and empower individuals through products that make a difference. Whether you’re looking for solutions to elevate your lifestyle or seeking unique designs to express your personality, we are here to serve you.`;
 
-                    {/* image */}
-                    <div id="comp-k0qndu82" className="MazNVa comp-k0qndu82 wixui-image">
-                        <div data-testid="linkElement" className="j7pOnl" style={{ display: 'flex', justifyContent: 'center' }}>
-                            <img data-aos="fade-right" alt="About Page Image" src="assets/img/gallery/about1.jpg" style={{width: "500px", marginTop:'100px'}}/>
-                        </div>
-                    </div>
+    AnimationComponent();
+
+    return (
+        <main className="mx-10">
+            <div className="grid grid-cols-2 mt-8">
+                {/* Left Image */}
+                <div className="flex justify-center">
+                    <img data-aos="fade-right" alt="About Page Image" src="assets/img/gallery/about.jpg" className="w-[500px] mt-24" />
                 </div>
-            </main>
-        </>
+
+                {/* Right Content */}
+                {[1, 2].map((id) => (
+                    <div key={id} className="mt-40" data-aos="fade-left">
+                        <p className="text-center">{content}</p>
+                    </div>
+                ))}
+
+                {/* Right Image */}
+                <div className="flex justify-center">
+                    <img data-aos="fade-right" alt="About Page Image" src="assets/img/gallery/about1.jpg" className="w-[500px] mt-24" />
+                </div>
+            </div>
+        </main>
     );
 };
+
 export default AboutPage;
