@@ -47,7 +47,7 @@ export default function Home() {
     <main className="w-full">
       <section className="container d-block m-auto mt-10 p-20" data-aos="zoom-in">
         <div className="text-center">
-          <h1 className="text-3xl"> <b>Cambodian Based <br /> Product  Service For Customers</b></h1>
+          <h1 className="text-3xl"> <b>Cambodian Based <br/> Product  Service For Customers</b></h1>
           <small>Get high-quality aesthetic  of your valuable products within a few days.</small>
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
