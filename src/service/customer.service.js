@@ -1,5 +1,5 @@
 //Get All Customer
-export const getAllCustomerService = async () =>{
+export const getAllCustomerService = async () => {
     const res = await fetch("https://655c2c57ab37729791a9f8b0.mockapi.io/api/customer");
     const data = await res.json();
     return data;
@@ -7,14 +7,14 @@ export const getAllCustomerService = async () =>{
 
 //Insert Customer
 export const insertCustomerService = async (newCustomer) => {
-    const res = await fetch (
-        "https://655c2c57ab37729791a9f8b0.mockapi.io/api/customer",{
-            method: "POST",
-            body: JSON.stringify(newCustomer),
-            headers: {
-                "Content-Type" : "application/json",
-           }
-        } 
+    const res = await fetch(
+        "https://655c2c57ab37729791a9f8b0.mockapi.io/api/customer", {
+        method: "POST",
+        body: JSON.stringify(newCustomer),
+        headers: {
+            "Content-Type": "application/json",
+        }
+    }
     );
     const data = await res.json();
     return data;
@@ -22,16 +22,16 @@ export const insertCustomerService = async (newCustomer) => {
 
 //Delete Customer Service
 export const deleteCustomerService = async (customerId, deleteData) => {
-    const res = await fetch (`https://655c2c57ab37729791a9f8b0.mockapi.io/api/customer/${customerId}`,
-    {
-        method : 'DELETE',
-        body: JSON.stringify(deleteData),
-        headers: {
-            "Content-Type": 'application/json',
+    const res = await fetch(`https://655c2c57ab37729791a9f8b0.mockapi.io/api/customer/${customerId}`,
+        {
+            method: 'DELETE',
+            body: JSON.stringify(deleteData),
+            headers: {
+                "Content-Type": 'application/json',
+            }
         }
-    }
-    
-); 
+
+    );
     const data = await res.json();
     return data;
 }
@@ -61,6 +61,8 @@ export const updateCustomerService = async (customerId, updatedData) => {
         throw error; // Rethrow the error to handle it in the calling code
     }
 };
+
+
 
 
 
