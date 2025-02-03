@@ -5,27 +5,14 @@ import { useForm } from "react-hook-form";
 
 const FormComponent = ({ customer, onFormSubmit }) => {
     // Initialize react-hook-form
-    const {
-        register,
-        handleSubmit,
-        reset, //Use reset to update form values
-        formState: { errors },
-    } = useForm({
-        defaultValues: {
-            customerName: "",
-            gender: "",
-            address: "",
-        },
+    const {register,handleSubmit,reset, formState: { errors },} = useForm({
+        defaultValues: { customerName: "", gender: "", address: "", },
     });
 
     // Update form fields when customer changes (for edit mode)
     useEffect(() => {
         if (customer) {
-            reset({
-                customerName: customer.customerName || "",
-                gender: customer.gender || "",
-                address: customer.address || "",
-            });
+            reset({customerName: customer.customerName || "", gender: customer.gender || "", address: customer.address || "", });
         } else {
             reset({ customerName: "", gender: "", address: "" }); //Ensure form resets properly
         }
@@ -52,12 +39,8 @@ const FormComponent = ({ customer, onFormSubmit }) => {
                             <div className="grid gap-y-4">
                                 {/* Customer Name */}
                                 <div>
-                                    <label htmlFor="customerName" className="block text-sm font-bold ml-1 mb-2 dark:text-white">
-                                        Customer Name
-                                    </label>
-                                    <input
-                                        id="customerName"
-                                        type="text"
+                                    <label htmlFor="customerName" className="block text-sm font-bold ml-1 mb-2 dark:text-white"> Customer Name</label>
+                                    <input id="customerName" type="text"
                                         {...register("customerName", {
                                             required: "Customer name is required",
                                             minLength: { value: 3, message: "Name must be at least 3 characters" },
@@ -88,24 +71,15 @@ const FormComponent = ({ customer, onFormSubmit }) => {
 
                                 {/* Address */}
                                 <div>
-                                    <label htmlFor="address" className="block text-sm font-bold ml-1 mb-2 dark:text-white">
-                                        Customer Address
-                                    </label>
-                                    <input
-                                        id="address"
-                                        type="text"
-                                        {...register("address", { required: "Address is required" })}
+                                    <label htmlFor="address" className="block text-sm font-bold ml-1 mb-2 dark:text-white"> Customer Address</label>
+                                    <input id="address" type="text" {...register("address", { required: "Address is required" })}
                                         className="input input-bordered input-primary w-full max-w-xs"
-                                        style={{ border: "1px solid", borderRadius: "5px" }}
-                                    />
+                                        style={{ border: "1px solid", borderRadius: "5px" }}/>
                                     {errors.address && <p className="text-red-500 text-xs mt-1">{errors.address.message}</p>}
                                 </div>
 
                                 {/* Submit Button */}
-                                <button
-                                    type="submit"
-                                    className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md max-w-xs border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600"
-                                >
+                                <button type="submit" className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md max-w-xs border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600" >
                                     {customer ? "Update Customer" : "Add Customer"}
                                 </button>
                             </div>
