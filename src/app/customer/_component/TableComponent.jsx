@@ -69,12 +69,11 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
           <thead>
             <tr className="bg-gray-100">
               <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                {" "}
-                Full Name
+                Full Name{" "}
               </th>
               <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                 {" "}
-                Gender{" "}
+                Gender
               </th>
               <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                 {" "}
@@ -82,7 +81,7 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
               </th>
               <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                 {" "}
-                Action{" "}
+                Action
               </th>
             </tr>
           </thead>
@@ -92,7 +91,7 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
                 <tr key={data.id}>
                   <th className="py-4 px-6 border-b border-gray-200">
                     {" "}
-                    {data.customerName}{" "}
+                    {data.customerName}
                   </th>
                   <td className="py-4 px-6 border-b border-gray-200 text-center">
                     {" "}
