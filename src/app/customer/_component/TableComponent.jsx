@@ -90,8 +90,7 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
               currentItems.map((data) => (
                 <tr key={data.id}>
                   <th className="py-4 px-6 border-b border-gray-200">
-                    {" "}
-                    {data.customerName}
+                    {data.customerName}{" "}
                   </th>
                   <td className="py-4 px-6 border-b border-gray-200 text-center">
                     {" "}
