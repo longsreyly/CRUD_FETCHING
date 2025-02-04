@@ -86,11 +86,7 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
             {currentItems.length > 0 ? (
               currentItems.map((data) => (
                 <tr key={data.id}>
-                  <th
-                    className="py-4 px-6 border-b border-gray-200"
-                    onBlur={myFunction()}
-                    id="fname"
-                  >
+                  <th className="py-4 px-6 border-b border-gray-200">
                     {data.customerName}
                   </th>
                   <td className="py-4 px-6 border-b border-gray-200 text-center">
@@ -166,12 +162,3 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
 };
 
 export default TableComponent;
-
-function myFunction() {
-  let x = document.querySelector("#fname"); // Alternative way to select
-  if (x) {
-    x.value = x.value.toUpperCase();
-  } else {
-    console.log("Element not found");
-  }
-}
