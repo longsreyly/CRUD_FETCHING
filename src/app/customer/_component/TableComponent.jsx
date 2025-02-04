@@ -90,7 +90,8 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
               currentItems.map((data) => (
                 <tr key={data.id}>
                   <th className="py-4 px-6 border-b border-gray-200">
-                    {data.customerName}{" "}
+                    {" "}
+                    {data.customerName}
                   </th>
                   <td className="py-4 px-6 border-b border-gray-200 text-center">
                     {" "}
@@ -107,7 +108,7 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
                         className="ml-2 py-1 px-3 text-sm text-white bg-green-500 rounded hover:bg-green-600"
                       >
                         {" "}
-                        Edit
+                        Edit{" "}
                       </button>
                       <button
                         onClick={() => onDeleteCustomer(data.id)}
