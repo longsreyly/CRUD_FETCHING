@@ -69,18 +69,15 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
           <thead>
             <tr className="bg-gray-100">
               <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                Full Name{" "}
+                Full Name
               </th>
               <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                {" "}
                 Gender
               </th>
               <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                {" "}
-                Address{" "}
+                Address
               </th>
               <th className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                {" "}
                 Action
               </th>
             </tr>
@@ -89,17 +86,18 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
             {currentItems.length > 0 ? (
               currentItems.map((data) => (
                 <tr key={data.id}>
-                  <th className="py-4 px-6 border-b border-gray-200">
-                    {" "}
+                  <th
+                    className="py-4 px-6 border-b border-gray-200"
+                    onBlur={myFunction()}
+                    id="fname"
+                  >
                     {data.customerName}
                   </th>
                   <td className="py-4 px-6 border-b border-gray-200 text-center">
-                    {" "}
-                    {data.gender}{" "}
+                    {data.gender}
                   </td>
                   <td className="py-4 px-6 border-b border-gray-200 truncate text-center">
-                    {" "}
-                    {data.address}{" "}
+                    {data.address}
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="d-flex ">
@@ -107,15 +105,13 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
                         onClick={() => onEditCustomer(data)}
                         className="ml-2 py-1 px-3 text-sm text-white bg-green-500 rounded hover:bg-green-600"
                       >
-                        {" "}
-                        Edit{" "}
+                        Edit
                       </button>
                       <button
                         onClick={() => onDeleteCustomer(data.id)}
                         className="ml-2 py-1 px-3 text-sm text-white bg-red-500 rounded hover:bg-red-600"
                       >
-                        {" "}
-                        Delete{" "}
+                        Delete
                       </button>
                     </div>
                   </td>
@@ -127,8 +123,7 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
                   colSpan="4"
                   className="text-center py-4 text-gray-500 font-medium"
                 >
-                  {" "}
-                  No data found{" "}
+                  No data found
                 </td>
               </tr>
             )}
@@ -171,3 +166,12 @@ const TableComponent = ({ customerData, onEditCustomer, onDeleteCustomer }) => {
 };
 
 export default TableComponent;
+
+function myFunction() {
+  let x = document.querySelector("#fname"); // Alternative way to select
+  if (x) {
+    x.value = x.value.toUpperCase();
+  } else {
+    console.log("Element not found");
+  }
+}
