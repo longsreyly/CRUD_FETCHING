@@ -94,6 +94,7 @@ export default function Home({ params: { locale } }) {
           key: "id",
           img: "image",
           extra: "name",
+          prict: "",
         },
         {
           title: "Our Teams",

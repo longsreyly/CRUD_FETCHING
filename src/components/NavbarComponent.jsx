@@ -112,15 +112,6 @@ const NavbarComponent = () => {
                     <span className="font-[sans-serif]">khmer</span>
                   </button>
                 </li>
-
-                <li>
-                  <button>
-                    <span className="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px font-mono !text-[.6rem] font-bold tracking-widest opacity-50">
-                      KR
-                    </span>
-                    <span className="font-[sans-serif]">korean</span>
-                  </button>
-                </li>
               </ul>
             </div>
           </div>
