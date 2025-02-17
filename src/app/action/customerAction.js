@@ -1,5 +1,6 @@
 "use server";
-import { deleteCustomerService, getAllCustomerService, updateCustomerService } from "@/service/customer.service";
+import { deleteCustomerService, getAllCustomerService, insertCustomerService, updateCustomerService } from "@/service/customer.service";
+import { revalidateTag } from "next/cache";
 
 //Insert Customer Service
 // export async function handlerCustomerInput(customerInput) {
@@ -15,13 +16,35 @@ import { deleteCustomerService, getAllCustomerService, updateCustomerService } f
 //     revalidateTag('customer')
 // }
 
-
+// insert customer service
+export async function handleCustomerInput(){
+    const newCustomer = {
+        customerName: handleCustomerInput.get("customerName"),
+        gender: "Female",
+        address: handleCustomerInput.get("address")
+    };
+    await insertCustomerService(newCustomer)
+    revalidateTag('customer')
+}
 
 // Delete Customer Action
 export async function deleteCustomerServiceAction(customerId) {
     await deleteCustomerService(customerId);  // Assuming this is your delete API call
     const updatedData = await getAllCustomerService();  // Re-fetch the data after deletion
     return updatedData;
+}
+
+
+//update customer service action
+export async function updateCustomerServiceAction(){
+    const updateData = {
+        customerName:  "Update Name",
+        gender: "Male",
+        address: "update Address"
+    };
+    const updateCustomer = await updateCustomerService();
+    console.log("GGGGGGGGGGG", updateCustomer);
+    
 }
 
 
