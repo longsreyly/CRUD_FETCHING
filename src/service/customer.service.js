@@ -18,7 +18,7 @@ export const insertCustomerService = async (newCustomer) => {
     );
     const data = await res.json();
     return data;
-}
+} 
 
 //Delete Customer Service
 export const deleteCustomerService = async (customerId, deleteData) => {
