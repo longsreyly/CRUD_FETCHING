@@ -32,16 +32,6 @@ export async function handleCustomerInput() {
   revalidateTag("customer");
 }
 
-// Test insert
-export async function insertCustomerServiceHandler() {
-  await insertCustomerService(); // Call the actual function
-  const update = await getAllCustomerService(); // Retrieve updated data
-
-  console.log("Updated Customer Data:", update);
-
-  return update; // Return the updated customer data
-}
-
 // Delete Customer Action
 export async function deleteCustomerServiceAction(customerId) {
   await deleteCustomerService(customerId); // Assuming this is your delete API call
