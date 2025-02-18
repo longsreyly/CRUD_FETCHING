@@ -1,5 +1,10 @@
 "use server";
-import { deleteCustomerService, getAllCustomerService, insertCustomerService, updateCustomerService } from "@/service/customer.service";
+import {
+  deleteCustomerService,
+  getAllCustomerService,
+  insertCustomerService,
+  updateCustomerService,
+} from "@/service/customer.service";
 import { revalidateTag } from "next/cache";
 
 //Insert Customer Service
@@ -10,31 +15,39 @@ import { revalidateTag } from "next/cache";
 //         customerName: customerInput.get("customerName"),
 //         gender: customerInput.get("gender"),
 //         address: customerInput.get("address"),
-       
+
 //     };
 //     await insertCustomerService(newCustomer)
 //     revalidateTag('customer')
 // }
 
 // insert customer service
-export async function handleCustomerInput(){
-    const newCustomer = {
-        customerName: handleCustomerInput.get("customerName"),
-        gender: "Female",
-        address: handleCustomerInput.get("address")
-    };
-    await insertCustomerService(newCustomer)
-    revalidateTag('customer')
+export async function handleCustomerInput() {
+  const newCustomer = {
+    customerName: handleCustomerInput.get("customerName"),
+    gender: "Female",
+    address: handleCustomerInput.get("address"),
+  };
+  await insertCustomerService(newCustomer);
+  revalidateTag("customer");
+}
+
+// Test insert
+export async function insertCustomerServiceHandler() {
+  await insertCustomerService(); // Call the actual function
+  const update = await getAllCustomerService(); // Retrieve updated data
+
+  console.log("Updated Customer Data:", update);
+
+  return update; // Return the updated customer data
 }
 
 // Delete Customer Action
 export async function deleteCustomerServiceAction(customerId) {
-    await deleteCustomerService(customerId);  // Assuming this is your delete API call
-    const updatedData = await getAllCustomerService();  // Re-fetch the data after deletion
-    return updatedData;
+  await deleteCustomerService(customerId); // Assuming this is your delete API call
+  const updatedData = await getAllCustomerService(); // Re-fetch the data after deletion
+  return updatedData;
 }
-
-
 
 // //update customer action
 // export async function updateCustomerServiceAction(customerId) {
@@ -46,4 +59,3 @@ export async function deleteCustomerServiceAction(customerId) {
 //     const updatedCustomer = await updateCustomerService(customerId, updatedData);
 //     console.log(updatedCustomer); // Log the updated customer details
 // }
-
