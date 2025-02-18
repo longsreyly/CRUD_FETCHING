@@ -17,6 +17,11 @@ const NavbarComponent = () => {
     setIsMenuOpen(!isMenuOpen); // Toggle the menu open/close
   };
 
+  const handleLanguageChange = (language) => {
+    console.log("Language selected:", language);
+    // Implement the action to change the language here
+  };
+
   return (
     <nav className="bg-gray-100 border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -97,16 +102,22 @@ const NavbarComponent = () => {
             >
               <ul className="menu menu-sm gap-1">
                 <li>
-                  <button>
-                    <span className="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px font-mono !text-[.6rem] font-bold tracking-widest opacity-50">
+                  <button
+                    className="w-full text-left hover:bg-gray-200 hover:text-white transition-colors duration-200"
+                    onClick={() => handleLanguageChange("EN")}
+                  >
+                    <span className="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px font-mono !text-[.6rem] font-bold tracking-widest opacity-100">
                       EN
                     </span>
                     <span className="font-[sans-serif]">english</span>
                   </button>
                 </li>
                 <li>
-                  <button>
-                    <span className="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px font-mono !text-[.6rem] font-bold tracking-widest opacity-50">
+                  <button
+                    className="w-full text-left hover:bg-gray-200 hover:text-white transition-colors duration-200"
+                    onClick={() => handleLanguageChange("KH")}
+                  >
+                    <span className="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px font-mono !text-[.6rem] font-bold tracking-widest opacity-100">
                       KH
                     </span>
                     <span className="font-[sans-serif]">khmer</span>

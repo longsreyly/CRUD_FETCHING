@@ -17,14 +17,24 @@ const FooterComponent = () => (
       </div>
       <div className="p-5 sm:w-7/12 border-r text-center">
         <h3 className="font-bold text-xl text-pink-600 mb-4">Componentity</h3>
-        <p className="text-gray-500 text-sm mb-10">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <p className="text-gray-500 text-sm mb-10">
+          Componentity is more than just a development technique; it’s a mindset
+          shift that allows teams to work more efficiently, develop faster, and
+          maintain applications over time. By embracing the power of components,
+          developers can ensure their applications remain flexible, scalable,
+          and maintainable.
+        </p>
       </div>
       <div className="p-5 sm:w-3/12">
-        <div className="text-sm uppercase text-pink-600 font-bold">Contact Us</div>
+        <div className="text-sm uppercase text-pink-600 font-bold">
+          Contact Us
+        </div>
         <ul>
           {["product@gmail.com", "contact@company.com"].map((email, idx) => (
             <li key={idx} className="my-2">
-              <Link className="hover:text-pink-600" href="#">{email}</Link>
+              <Link className="hover:text-pink-600" href="#">
+                {email}
+              </Link>
             </li>
           ))}
         </ul>
