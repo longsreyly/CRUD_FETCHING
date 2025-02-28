@@ -26,9 +26,7 @@ const FooterComponent = () => (
         </p>
       </div>
       <div className="p-5 sm:w-3/12">
-        <div className="text-sm uppercase text-pink-600 font-bold">
-          Contact Us
-        </div>
+        <div className="text-sm uppercase text-pink-600 font-bold">  Contact Us </div>
         <ul>
           {["product@gmail.com", "contact@company.com"].map((email, idx) => (
             <li key={idx} className="my-2">

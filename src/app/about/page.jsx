@@ -13,12 +13,7 @@ const AboutPage = () => {
       <div className="grid grid-cols-2 mt-8">
         {/* Left Image */}
         <div className="flex justify-center">
-          <img
-            data-aos="fade-right"
-            alt="About Page Image"
-            src="assets/img/gallery/about.jpg"
-            className="w-[500px] mt-24"
-          />
+          <img data-aos="fade-right" alt="About Page Image" src="assets/img/gallery/about.jpg"  className="w-[500px] mt-24" />
         </div>
         {/* Right Content */}
         {[1, 2].map((id) => (
@@ -28,12 +23,7 @@ const AboutPage = () => {
         ))}
         {/* Right Image */}
         <div className="flex justify-center">
-          <img
-            data-aos="fade-right"
-            alt="About Page Image"
-            src="assets/img/gallery/about1.jpg"
-            className="w-[500px] mt-24"
-          />
+          <img data-aos="fade-right" alt="About Page Image" src="assets/img/gallery/about1.jpg"  className="w-[500px] mt-24" />
         </div>
       </div>
     </main>
