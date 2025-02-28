@@ -27,23 +27,14 @@ const NavbarComponent = () => {
             alt="Flowbite Logo"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            {" "}
             Fake-Store{" "}
           </span>
         </Link>
         <div className="flex md:order-2">
-          <Link
-            className="ml-5 block px-4 py-3 bg-pink-400 text-white text-xs font-semibold rounded-xl hover:bg-pink-500 dark:text-gray-200 dark:bg-pink-500 hover:text-gray-100"
-            href="/customer"
-          >
-            {" "}
+          <Link className="ml-5 block px-4 py-3 bg-pink-400 text-white text-xs font-semibold rounded-xl hover:bg-pink-500 dark:text-gray-200 dark:bg-pink-500 hover:text-gray-100" href="/customer" >
             Add Customer{" "}
           </Link>
-          <button
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            onClick={toggleMenu}
-          >
+          <button  type="button"  className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"  onClick={toggleMenu}  >
             <span className="sr-only">Open main menu</span>
             <svg
               className="w-5 h-5"
@@ -90,32 +81,6 @@ const NavbarComponent = () => {
               >
                 <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
               </svg>
-            </div>{" "}
-            <div
-              tabIndex="0"
-              className="dropdown-content bg-base-200 text-base-content rounded-box top-px mt-16 max-h-[calc(100vh-10rem)] w-56 overflow-y-auto border border-white/5 shadow-2xl outline outline-1 outline-black/5"
-            >
-              <ul className="menu menu-sm gap-1">
-                <li>
-                  <button className="w-full text-left hover:bg-gray-200 hover:text-white transition-colors duration-200">
-                    <span className="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px font-mono !text-[.6rem] font-bold tracking-widest opacity-100">
-                      {" "}
-                      EN{" "}
-                    </span>
-                    <span className="font-[sans-serif]">english</span>
-                  </button>
-                </li>
-
-                <li>
-                  <button className="w-full text-left hover:bg-gray-200 hover:text-white transition-colors duration-200">
-                    <span className="badge badge-sm badge-outline !pl-1.5 !pr-1 pt-px font-mono !text-[.6rem] font-bold tracking-widest opacity-100">
-                      {" "}
-                      KH
-                    </span>
-                    <span className="font-[sans-serif]">khmer</span>
-                  </button>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
