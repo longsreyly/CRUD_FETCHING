@@ -10,6 +10,7 @@ import {
   getAllCustomerService,
   getAllProductService,
 } from "@/service/product.service";
+import TestComponent from "@/components/TestComponent";
 
 export default function Home({ params: { locale } }) {
   const t = useTransition("navbar");
@@ -129,6 +130,7 @@ export default function Home({ params: { locale } }) {
           </div>
         </section>
       ))}
+
     </main>
   );
 }
