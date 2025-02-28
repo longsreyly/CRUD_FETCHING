@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import {getAllCategorieService, getAllCustomerService, getAllProductService,} from "@/service/product.service";
-import TableComponent from "@/components/TableComponent";
 
 export default function Home({ params: { locale } }) {
   const t = useTransition("navbar");
